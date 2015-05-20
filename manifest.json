@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+
+    "name": "Swannifier",
+    "description": "This will turn any page with id=\"content\" into a Wikipedia page (for now).",
+    "version": "1.0",
+
+    "permissions": [
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": "img/icon.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*"],
+          "js": ["jquery.js", "script.js"],
+          "run_at": "document_end"
+        }
+      ]
+}
