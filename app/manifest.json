@@ -6,11 +6,16 @@
     "version": "1.0",
 
     "permissions": [
-        "storage"
+        "storage",
+		"tabs"
     ],
+	"background": {
+		"scripts": ["background.js"]
+	},
     "browser_action": {
-        "default_icon": "img/icon.png"
-    },
+        "default_icon": "img/active.png",
+		"default_title": "Format It"
+    },	
     "content_scripts": [
         {
           "matches": ["http://*/*"],
